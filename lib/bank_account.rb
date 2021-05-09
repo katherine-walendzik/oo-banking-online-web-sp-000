@@ -9,6 +9,8 @@ class BankAccount
   end
   
   def name=(name)
+    if
+      @name raise NameError, 
     @name = name
   end
   
