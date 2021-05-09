@@ -10,8 +10,10 @@ class BankAccount
   
   def name=(name)
     if @name
-      raise NameError, "Cannot change account name"
-    @name = name
+      raise NameError, "Please don't rename your account!"
+    else
+      @name = name
+    end
   end
   
   def deposit(amount)
