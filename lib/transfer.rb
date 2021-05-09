@@ -16,7 +16,10 @@ class Transfer
     if self.sender.status != "open" || sender.receiver.status != "open" || self.sender.balance < self.amount
       self.status = "rejected"
     elsif self.status != "complete"
-      self.sender.
+      self.sender.balance -= amount
+      self.receiver.balance += amount
+      self.status = "complete"
+    end
   end
   
   def reverse_transfer
