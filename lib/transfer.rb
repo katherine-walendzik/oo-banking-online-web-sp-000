@@ -12,7 +12,7 @@ class Transfer
     self.sender.valid? && self.receiver.valid?
   end
   
-  def execute_transaction(amount)
+  def execute_transaction
     if self.sender.status != "open" || sender.receiver.status != "open" || self.sender.balance < self.amount
       self.status = "rejected"
     elsif self.status != "complete"
