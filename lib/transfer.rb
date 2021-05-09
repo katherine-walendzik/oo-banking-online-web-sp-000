@@ -13,7 +13,7 @@ class Transfer
   end
   
   def execute_transaction(amount)
-    BankAccount.balance += amount
+    if self.
   end
   
   def reverse_transfer
