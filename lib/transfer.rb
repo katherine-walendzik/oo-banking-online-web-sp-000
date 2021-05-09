@@ -12,8 +12,8 @@ class Transfer
     self.sender.valid? && self.receiver.valid?
   end
   
-  def execute_transaction
-    
+  def execute_transaction(amount)
+    BankAccount.balance += amount
   end
   
   def reverse_transfer
