@@ -13,8 +13,10 @@ class Transfer
   end
   
   def execute_transaction(amount)
-    if self.sender.status != "open" || sender.receiver.status != "open" || self.balance < self.amount
-      self.status = ""
+    if self.sender.status != "open" || sender.receiver.status != "open" || self.sender.balance < self.amount
+      self.status = "rejected"
+    elsif
+      
   end
   
   def reverse_transfer
